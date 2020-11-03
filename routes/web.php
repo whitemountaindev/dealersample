@@ -14,3 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'App\Http\Controllers\PageController@index')->name('index');
+Route::get('/listingOne', 'App\Http\Controllers\PageController@listingOne')->name('listingOne');
+Route::get('/detailsOne', 'App\Http\Controllers\PageController@detailsOne')->name('detailsOne');
+Route::get('/contactOne', 'App\Http\Controllers\PageController@contactOne')->name('contactOne');

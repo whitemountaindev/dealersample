@@ -10,4 +10,16 @@ class PageController extends Controller
     {
         return view ('welcome');
     }
+    public function listingOne()
+    {
+        return view ('listingOne');
+    }
+    public function detailsOne()
+    {
+        return view ('detailsOne');
+    }
+    public function contactOne()
+    {
+        return view ('contactOne');
+    }
 }
