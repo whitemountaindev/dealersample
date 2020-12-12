@@ -8,7 +8,9 @@ class PageController extends Controller
 {
     public function index()
     {
-        return view ('welcome');
+        $vehicles = Vehicle::all();
+
+        return view ('welcome')->with(['vehicles' => $vehicles]);
     }
     public function listingOne()
     {

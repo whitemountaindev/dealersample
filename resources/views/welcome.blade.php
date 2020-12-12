@@ -291,6 +291,9 @@
       <div class="col-md-12">
          <div class="section-title">
            <span>Welcome to our website</span>
+           @foreach($vehicles as $vehicle)
+           {{ $vehicle->name }}
+           @endforeach
            <h2>Dealeractive</h2>
            <div class="separator"></div>
            <p>Car Dealer is the best premium HTML5 Template. We provide everything you need to build an <strong>Amazing dealership website</strong>  developed especially for car sellers, dealers or auto motor retailers. You can use this template for creating website based on any framework and any language.</p> </div>
