@@ -15,7 +15,9 @@ class PageController extends Controller
     }
     public function listingOne()
     {
-        return view ('listingOne');
+        $vehicles = Vehicle::all();
+
+        return view ('listingOne')->with(['vehicles ' => $vehicles]);
     }
     public function detailsOne()
     {
