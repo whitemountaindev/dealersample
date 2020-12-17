@@ -18,7 +18,7 @@ class Image extends Model
 
     public function image()
     {
-       return Storage::disk('do_spaces')->url('vehicle_pictures/demo'.$this->name);
+       return Storage::disk('do_spaces')->url('vehicle_pictures/demo/'.$this->name);
     }
 
 }
