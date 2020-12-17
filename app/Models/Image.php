@@ -11,8 +11,6 @@ class Image extends Model
 {
     use HasFactory;
 
-    protected $connection = 'tenant';
-
     public function vehicle()
     {
         return $this->belongsTo('App\Models\Vehicle');
@@ -20,7 +18,7 @@ class Image extends Model
 
     public function image()
     {
-       return Storage::disk('do_spaces')->url('vehicle_pictures/'.Auth::user()->teams()->first()->name.'/'.$this->name);
+       return Storage::disk('do_spaces')->url('vehicle_pictures/demo'.$this->name);
     }
 
 }

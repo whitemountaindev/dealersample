@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Vehicle;
+use App\Models\Image;
 
 class PageController extends Controller
 {
@@ -15,9 +16,11 @@ class PageController extends Controller
     }
     public function listingOne()
     {
-        $vehicles = Vehicle::all();
+        $vehicles = Vehicle::with('images')->get();
 
-        return view ('listingOne')->with(['vehicles ' => $vehicles]);
+        // dd($vehicles);
+
+        return view ('listingOne')->with(['vehicles' => $vehicles]);
     }
     public function detailsOne()
     {
